@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="libs/normalize.css">
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/fontAwesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="webfonts/stylesheet.css">
+    <link rel="stylesheet" href="css/style-min.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/siema.min.js"></script>
+
+    <title>Kinder Party test page</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header" id="header">
+        <div class="header__contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="header__social">
+                            <ul>
+                                <li><a href="facebook.com">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a></li>
+                                <li><a href="instagram.com">
+                                    <i class="fab fa-instagram"></i>
+                                </a></li>
+                                <li><a href="vk.com">
+                                    <i class="fab fa-vk"></i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <div class="header__tel-mail">
+                            <ul>
+                                <li><a href="tel:+79260635571"><i
+                                        class="fas fa-phone-volume"></i><span>+7 926 0635571</span></a></li>
+                                <li><a href="tel:+79260635571"><i
+                                        class="fas fa-phone-volume"></i><span>+7 926 0635571</span></a></li>
+                                <li><a href="mailto:kinder-party@rambler.ru"><i class="fas fa-at"></i><span>kinder-party@rambler.ru</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__navbox">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="header__logo"><a href=""><img src="img/kinderParty_logo.svg" alt="Логотип"></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        <nav class="header__nav">
+                            <ul>
+                                <li class="active"><a href="#about">о проекте</a></li>
+                                <li><a href="#parties">вечеринки</a></li>
+                                <li><a href="#videos">видео</a></li>
+                                <li><a href="#reviews">отзывы</a></li>
+                                <li><a href="#contactUs">рассчитать стоимость</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="screen">
+        <div class="screen__bg">
+            <img src="img/background.jpg" alt="фон блока">
+        </div>
+        <div class="screen__box">
+            <img src="img/kinderParty_logo.svg" alt="KinderParty Logo" class="screen__logo">
+            <button class="screen__btn">Заказать вечеринку</button>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="container about__container">
+            <div class="row ">
+                <div class="col-12 ">
+                    <div class="about__title ">
+                        <h2>о проекте</h2>
+                        <p>Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого раздела
+                            Текст описания этого раздела, текст описания этого раздела, текст описания этого
+                            раздела </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="poster" id="parties">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 ">
+                    <h2 class="poster__title ">Афиша! Афиша!</h2>
+                    <h3 class="poster__h3 ">Найди свою особенную вечеринку!</h3>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 ">
+                    <div class="poster__slider ">
+                        <div class="poster__slider-btn_prev"></div>
+                        <div class="poster__slider_img">
+                            <img src="img/poster1.jpg" alt="картинка афиши">
+                            <img src="img/poster2.jpg" alt="картинка афиши">
+                            <img src="img/poster3.jpg" alt="картинка афиши">
+                            <img src="img/poster1.jpg" alt="картинка афиши">
+                            <img src="img/poster2.jpg" alt="картинка афиши">
+                        </div>
+                        <div class="poster__slider-btn_next"></div>
+                    </div>
+                    <script>
+                        const mySiema = new Siema({
+                            selector: '.poster__slider_img'
+                        });
+                        const prev = document.querySelector('.poster__slider-btn_prev');
+                        const next = document.querySelector('.poster__slider-btn_next');
+
+                        prev.addEventListener('click', () => mySiema.prev());
+                        next.addEventListener('click', () => mySiema.next());
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video" id="videos">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 ">
+                    <h2 class="video__title ">
+                        Видео с мероприятий
+                    </h2>
+                </div>
+                <div class="col-12 ">
+                    <div class="video__slider">
+
+                        <div class="video__slider-btn_bg1">
+                            <div class="video__slider-btn_prev"></div>
+                        </div>
+
+
+                        <div class="video__slider_img">
+                            ​
+                            <iframe width="560" height="315"
+                                    src="https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <img src="img/video1.jpg" alt="картинка видео">
+                            <img src="img/video2.jpg" alt="картинка видео">
+                        </div>
+
+
+                        <div class="video__slider-btn_bg2">
+                            <div class="video__slider-btn_next"></div>
+                        </div>
+                    </div>
+
+                    <script>
+                        const mySiema1 = new Siema({
+                            selector: '.video__slider_img',
+                            draggable: false
+                        });
+                        const prev1 = document.querySelector('.video__slider-btn_bg1');
+                        const next1 = document.querySelector('.video__slider-btn_bg2');
+
+                        prev1.addEventListener('click', () => mySiema1.prev());
+                        next1.addEventListener('click', () => mySiema1.next());
+                    </script>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reviews" id="reviews">
+        <div class="container">
+            <div class="row reviews_row">
+                <div class="col-12 ">
+                    <h2 class="reviews__title ">
+                        Отзывы
+                    </h2>
+                    <h3 class="reviews__h3 ">
+                        Поделись своими впечатлениями!
+                    </h3>
+                </div>
+                <div class="col-12 ">
+                    <div class="reviews__slider">
+
+                        <div class="reviews__slider-btn_prev"></div>
+
+                        <div class="reviews__slider_box">
+                            <div>
+                                <img src="img/reviews_photo1.png" alt="картинка видео">
+                                <p>Текст отзыва, текст отзыва, текст отзыва Текст отзыва, текст отзыва, текст отзыва
+                                    Текст
+                                    отзыва, текст отзыва, текст отзыва Текст отзыва, текст отзыва, текст отзыва Текст
+                                    отзыва, текст отзыва, текст отзыва Текст отзыва, текст отзыва, текст отзыва </p>
+                            </div>
+                            <div>
+                                <img src="img/reviews_photo1.png" alt="картинка видео">
+                                <p>Текст отзыва, текст отзыва, текст отзыва Текст отзыва, текст отзыва, текст отзыва
+                                    Текст
+                                    отзыва, текст отзыва, текст отзыва Текст отзыва, текст отзыва, текст отзыва Текст
+                                    отзыва, текст отзыва, текст отзыва Текст отзыва, текст отзыва, текст отзыва </p>
+                            </div>
+                        </div>
+
+                        <div class="reviews__slider-btn_next"></div>
+                    </div>
+
+                    <script>
+                        const mySiema2 = new Siema({
+                            selector: '.reviews__slider_box'
+                        });
+                        const prev2 = document.querySelector('.reviews__slider-btn_prev');
+                        const next2 = document.querySelector('.reviews__slider-btn_next');
+
+                        prev2.addEventListener('click', () => mySiema2.prev());
+                        next2.addEventListener('click', () => mySiema2.next());
+                    </script>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="callback" id="contactUs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="callback__form-block">
+                            <h2 class="callback__title">У Вас мероприятие?</h2>
+                            <h4 class="callback__h4">Раскажите нам о нем подробнее,<br> и мы сделаем его</h4>
+                            <h3 class="callback__h3">незабываемым!</h3>
+
+                            <form action=" " class="callback__form">
+
+                                <div class="callback__wrapper_contacts">
+                                    <div class="callback__wrapper-name">
+                                        <i class="fas fa-user"></i><input type="text" name="name" id="name"
+                                                                          class="callback__input name"
+                                                                          placeholder="Введите Ваше имя">
+                                    </div>
+
+                                    <div class="callback__wrapper-tel">
+                                        <i class="fas fa-phone-volume"></i><input type="text" name="name" id="tel"
+                                                                                  class="callback__input phone"
+                                                                                  placeholder="Введите Ваш телефон">
+                                    </div>
+
+                                </div>
+                                <div id="name_error" class="error">ошибка заполнения</div>
+                                <div id="phone_error" class="error">ошибка заполнения</div>
+                                <textarea name="message" id="callback__wrapper-text" rows="4" class="callback__textarea"
+                                          placeholder="Напишите пару слов о мероприятии..."></textarea>
+
+                                <input type="submit" name="submit" id="callback__submit" value="Оставить заявку">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-12">
+                        <div class="footer__contacts ">
+                            <div class="container footer__contacts">
+                                <div class="row ">
+                                    <div class="col-12 col-md-3">
+                                        <div class="footer__logo">
+                                            <a href=""><img src="img/kinderParty_logo.svg" alt="Логотип"></a>
+                                            <ul>
+                                                <li><a href="tel:+79260635571"><i class="fas fa-phone-volume"></i><span>+7 926 0635571</span></a>
+                                                </li>
+                                                <li><a href="tel:+79260635571"><i class="fas fa-phone-volume"></i><span>+7 926 0635571</span></a>
+                                                </li>
+                                                <li><a href="mailto:kinder-party@rambler.ru"><i
+                                                        class="fas fa-at"></i><span>kinder-party@rambler.ru</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <p class="footer__text">Креативные, взрывные вечеринки, <br>которые ни кого не
+                                            оставят равнодушными!</p>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <nav class="footer__nav">
+                                            <ul>
+                                                <li><a href="#header">главная</a></li>
+                                                <li><a href="#about">о проекте</a></li>
+                                                <li><a href="#parties">вечеринки</a></li>
+                                                <li><a href="#videos">видео</a></li>
+                                                <li><a href="#reviews">отзывы</a></li>
+                                                <li><a href="#contactUs">оставить заявку</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="col-12 col-md-2">
+                                        <p class="footer__social-p">Мы в соцсетях:</p>
+                                        <div class="footer__social">
+                                            <ul>
+                                                <li><a href="facebook.com"> <i class="fab fa-facebook-f"></i> </a><span>facebook</span>
+                                                </li>
+                                                <li><a href="instagram.com"> <i class="fab fa-instagram"></i> </a><span>instagram</span>
+                                                </li>
+                                                <li><a href="vk.com">
+                                                    <i class="fab fa-vk"></i> </a>вконтакте
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_copyright">Copyright © Kinder-party 2018</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        /* function check() {
+             //проверка имени
+             let name = document.getElementById('name').value;
+             let reqExp1 = /^[A-zА-я]+$/; // только буквы
+             let err1 = document.getElementById('name_error');
+
+             write_error1(reqExp1, name, err1, '*ошибка заполненения, имя должно состоять только из букв');
+
+             //проверка телефона
+             let tel = document.getElementById('tel').value; ///////////////////почему здесь ошибку выдает??????????
+             let reqExp2 = /^\d+$/; // только цифры
+             let err2 = document.getElementById('phone_error');
+
+             write_error2(reqExp2, tel, err2, '*ошибка заполненения, номер телефона должен содержать не более 11 цифр');
+
+         }
+
+         function write_error1(reqExp1, name, err1, text) {
+             if (name.length === 0) {
+                 err1.textContent = '*ошибка заполнения, поле должно быть заполнено';
+                 err1.classList.add('active');
+             } else if (!reqExp1.test(name)) {
+                 err1.textContent = text;
+                 err1.classList.add('active');
+             } else {
+                 err1.textContent = '';
+                 err1.classList.remove('active');
+                 err1.classList.add('ok');
+             }
+         }
+
+         function write_error2(reqExp2, tel, err2, text) {
+             if (tel.length === 0) {
+                 err2.textContent = '*ошибка заполнения, поле должно быть заполнено';
+                 err2.classList.add('active');
+             } else if (!reqExp2.test(tel)) {
+                 err2.textContent = text;
+                 tel.classList.add('active');
+             } else {
+                 err2.textContent = '';
+                 err2.classList.remove('active');
+                 err2.classList.add('ok');
+             }
+         }*/
+        const form = document.getElementsByClassName('callback__form')[0],
+            inputName = document.getElementsByClassName('name'),
+            inputPhone = document.getElementsByClassName('phone');
+
+        for (let i = 0, len = inputName.length; i < len; i++) {
+            inputName[i].addEventListener('keydown', checkWorlds);
+
+        }
+
+        function checkWorlds(event) {
+
+            let value = this.value;
+            let err1 = document.getElementById('name_error');
+
+            if (/^[A-zА-я]+$/.test(event.key)) {
+                if (value.length === 0) {
+                    err1.textContent = '*ошибка заполнения, поле должно быть заполнено';
+                    err1.classList.add('active');
+                } else {
+                    err1.textContent = '';
+                    err1.classList.remove('active');
+                    err1.classList.add('ok');
+                }
+            }
+
+            this.value = err1;
+        }
+
+        for (let i = 0, len = inputPhone.length; i < len; i++) {
+            inputPhone[i].addEventListener('keydown', checkFields);
+
+        }
+
+
+        function checkFields(e) {
+
+            let value = this.value;
+            let str = '';
+
+            if (/\d/.test(e.key)) {
+                if (value.length === 0) {
+                    str = '+ ' + value;
+                } else if (value.length === 3) {
+                    str = value + ' (';
+                } else if (value.length === 8) {
+                    str = value + ') ';
+                } else if (value.length === 13 || value.length === 16) {
+                    str = value + '-';
+                } else if (value.length >= 18) {
+                    str = value.slice(0, 18);
+                } else {
+                    str = value;
+                }
+            }
+
+            this.value = str;
+
+        }
+
+
+        /*document.getElementById('callback__submit').addEventListener('click',(event) => {
+            event.preventDefault();
+        check()
+        });*/
+
+    </script>
+</body>
+
+</html>
